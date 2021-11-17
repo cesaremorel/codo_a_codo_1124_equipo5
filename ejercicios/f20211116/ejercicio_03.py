@@ -1,2 +1,5 @@
 def myfunction(string, index, character):
-    return "Sin implementar"
+    l = list(string)
+    l[index] = character
+    return (''.join(l))
+
