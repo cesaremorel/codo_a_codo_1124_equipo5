@@ -1,3 +1,5 @@
+from colorama import Fore, Back, Style
+
 from ejercicios.f20211116.ejercicio_01 import myfunction as ejercicio_01
 from ejercicios.f20211116.ejercicio_02 import myfunction as ejercicio_02
 from ejercicios.f20211116.ejercicio_03 import myfunction as ejercicio_03
@@ -6,19 +8,22 @@ from ejercicios.f20211116.ejercicio_05 import myfunction as ejercicio_05
 from ejercicios.f20211116.extra.ejercicio_a import myfunction as ejercicio_a
 from ejercicios.f20211116.extra.ejercicio_b import myfunction as ejercicio_b
 
-print('############# INICIO ###################')
+print('\n################### EJERCICIOS 16-11-2021 ###################\n')
 
-print(ejercicio_01('hola mundo'))
+def reporte(ejercicio, invocacion, resultado):
+    print('Ejercicio: ' + Fore.BLUE + ejercicio + Style.RESET_ALL)
+    print(Style.DIM + 'Probando con: ' + invocacion + Style.RESET_ALL)
+    print('Resultado: ' + Style.BRIGHT + resultado + Style.RESET_ALL)
+    print('-----------')
 
-print(ejercicio_02('Hola Mundo'))
 
-print(ejercicio_03('mesa', 2, 't'))
+reporte('1', 'ejercicio_01(\'hola mundo\')', ejercicio_01('hola mundo'))
+reporte('2', 'ejercicio_02(\'Hola Mundo\')', ejercicio_02('Hola Mundo'))
+reporte('3', 'ejercicio_03(\'mesa\', 2, \'t\')', ejercicio_03('mesa', 2, 't'))
+reporte('4', 'ejercicio_04(\'Alejandro Medici\')', ejercicio_04('Alejandro Medici'))
+reporte('5', 'ejercicio_05([2,6,10,10,7,8,5,6])', ejercicio_05([2,6,10,10,7,8,5,6]))
 
-print(ejercicio_04('Alejandro Medici'))
+print('\n################### EXTRAS ###################\n')
 
-print(ejercicio_05([2,6,10,10,7,8,5,6]))
-
-print('############# EXTRAS ###################')
-
-print(ejercicio_a(6))
-print(ejercicio_b('Telefunken'))
+reporte('extra A', 'ejercicio_a(6)', ejercicio_a(6))
+reporte('extra B', 'ejercicio_b(\'Telefunken\')', ejercicio_b('Telefunken'))
