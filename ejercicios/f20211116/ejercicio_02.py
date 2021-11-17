@@ -1,2 +1,2 @@
 def myfunction(string):
-    return "Sim implementar"
+    return string[:100].swapcase()
