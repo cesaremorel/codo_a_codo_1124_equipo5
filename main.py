@@ -20,5 +20,5 @@ print(ejercicio_05([2,6,10,10,7,8,5,6]))
 
 print('############# EXTRAS ###################')
 
-print(ejercicio_a(6))
+ejercicio_a(6)
 print(ejercicio_b('Telefunken'))
