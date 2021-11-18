@@ -14,7 +14,7 @@ def reporte(ejercicio, invocacion, resultado = False) :
     print('Ejercicio: ' + Fore.BLUE + ejercicio + Style.RESET_ALL)
     print(Style.DIM + 'Probando con: ' + invocacion + Style.RESET_ALL)
     if resultado:
-        print('Resultado: ' + Style.BRIGHT + resultado + Style.RESET_ALL)
+        print('Resultado: ' + Style.BRIGHT + repr(resultado) + Style.RESET_ALL)
     print('-----------')
 
 
