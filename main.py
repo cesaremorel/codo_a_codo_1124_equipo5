@@ -10,20 +10,24 @@ from ejercicios.f20211116.extra.ejercicio_b import myfunction as ejercicio_b
 
 print('\n################### EJERCICIOS 16-11-2021 ###################\n')
 
-def reporte(ejercicio, invocacion, resultado):
+def reporte(ejercicio, invocacion, resultado = False) :
     print('Ejercicio: ' + Fore.BLUE + ejercicio + Style.RESET_ALL)
     print(Style.DIM + 'Probando con: ' + invocacion + Style.RESET_ALL)
-    print('Resultado: ' + Style.BRIGHT + resultado + Style.RESET_ALL)
+    if resultado:
+        print('Resultado: ' + Style.BRIGHT + resultado + Style.RESET_ALL)
     print('-----------')
 
 
 reporte('1', 'ejercicio_01(\'hola mundo\')', ejercicio_01('hola mundo'))
 reporte('2', 'ejercicio_02(\'Hola Mundo\')', ejercicio_02('Hola Mundo'))
 reporte('3', 'ejercicio_03(\'mesa\', 2, \'t\')', ejercicio_03('mesa', 2, 't'))
-reporte('4', 'ejercicio_04(\'Alejandro Medici\')', ejercicio_04('Alejandro Medici'))
+reporte('4', 'ejercicio_04(\'alejandro medici\')', ejercicio_04('alejandro medici'))
 reporte('5', 'ejercicio_05([2,6,10,10,7,8,5,6])', ejercicio_05([2,6,10,10,7,8,5,6]))
 
 print('\n################### EXTRAS ###################\n')
+# Son procedimientos (imprimen en pantalla pero no retornan data)
+reporte('extra A', 'ejercicio_a(6)')
+ejercicio_a(6),
 
-reporte('extra A', 'ejercicio_a(6)', ejercicio_a(6))
-reporte('extra B', 'ejercicio_b(\'Telefunken\')', ejercicio_b('Telefunken'))
+reporte('extra B', 'ejercicio_b(\'Telefunken\')')
+ejercicio_b('Telefunken')
