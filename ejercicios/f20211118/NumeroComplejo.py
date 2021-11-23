@@ -5,22 +5,22 @@ class NumeroComplejo():
         self.real = real
         self.imaginario = imaginario
 
-    def sumar(self, complejo):
+    def __add__(self, complejo):
         real = self.real + complejo.real
         imaginario = self.imaginario + complejo.imaginario
         return NumeroComplejo(real, imaginario)
 
-    def restar(self, complejo):
+    def __sub__(self, complejo):
         real = self.real - complejo.real
         imaginario = self.imaginario - complejo.imaginario
         return NumeroComplejo(real, imaginario)
 
-    def multiplicar(self, complejo):
+    def __mul__(self, complejo):
         real = (self.real * complejo.real) - ( self.imaginario * complejo.imaginario ) 
         imaginario = (self.real * complejo.imaginario) + ( self.imaginario * complejo.real )
         return NumeroComplejo(real, imaginario)
 
-    def dividir(self, complejo):
+    def __truediv__(self, complejo):
         real = ( self.real * complejo.real + self.imaginario * complejo.imaginario ) / ( complejo.real ** 2 + complejo.imaginario ** 2)
         imaginario = (self.imaginario * complejo.real - self.real * complejo.imaginario ) / ( complejo.real ** 2 + complejo.imaginario ** 2)
         return NumeroComplejo(real, imaginario)
