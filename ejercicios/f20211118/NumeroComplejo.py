@@ -27,4 +27,6 @@ class NumeroComplejo():
         
 
     def __str__(self):
-        return '(' + repr(self.real) + ' + ' + repr(self.imaginario) + 'i)' 
+        parte_real = repr(self.real)
+        parte_imaginaria = ' + ' + repr(self.imaginario) if self.imaginario > 0  else ' - ' + repr(self.imaginario * -1)
+        return '(' + parte_real + parte_imaginaria + 'i)' 
