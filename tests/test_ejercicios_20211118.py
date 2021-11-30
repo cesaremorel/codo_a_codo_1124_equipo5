@@ -16,4 +16,5 @@ class Ejercicios20211118TestCase(TestCase):
     
     def test_NumeroComplejo_division(self):
         self.assertEqual((NumeroComplejo(1,5) / NumeroComplejo(1, 2)), NumeroComplejo(2.2,0.6))
-    
+        
+   
