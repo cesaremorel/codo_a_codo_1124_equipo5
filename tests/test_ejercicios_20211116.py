@@ -14,6 +14,7 @@ class Ejercicios20211116TestCase(TestCase):
     def test_ejercicio1(self):
         self.assertEqual(ejercicio_01('hola mundo'), 'hola-mundo' )
         self.assertEqual(ejercicio_01('hola mundo Cruel'), 'hola-mundo-Cruel' )
+        self.assertEqual(ejercicio_01('hola  mundo Cruel'), 'hola--mundo-Cruel' )
 
     def test_ejercicio2(self):
         self.assertEqual(ejercicio_02('hola mundo'), 'HOLA MUNDO' )
